@@ -1,0 +1,239 @@
+.services-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.page-header-banner {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: #ffffff;
+  padding: 2.25rem 2rem;
+  border-radius: var(--radius-lg);
+}
+
+.page-header-banner h2 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 0.375rem;
+}
+
+.page-header-banner p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+/* Catalog Filters Bar */
+.catalog-filters-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.category-tabs-scroll {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.375rem;
+  scrollbar-width: thin;
+}
+
+.cat-filter-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  background-color: #f8fafc;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.cat-filter-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.cat-filter-btn.active {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+}
+
+.search-sort-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .search-sort-row {
+    flex-direction: column;
+  }
+}
+
+.search-input-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+}
+
+.search-input-wrapper .search-icon {
+  position: absolute;
+  left: 0.875rem;
+  color: var(--text-muted);
+}
+
+.search-input-wrapper input {
+  width: 100%;
+  padding: 0.625rem 2.5rem 0.625rem 2.5rem;
+  font-size: 0.9rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  outline: none;
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 0.875rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.sort-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.sort-wrapper select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  outline: none;
+  background-color: #ffffff;
+}
+
+/* Service Detail Modal Content */
+.service-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.modal-service-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-service-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.modal-service-highlights {
+  display: flex;
+  gap: 1.5rem;
+  background-color: #f8fafc;
+  padding: 0.875rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.modal-includes-box {
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+}
+
+.modal-includes-box h4 {
+  font-size: 0.95rem;
+  color: #065f46;
+  margin-bottom: 0.625rem;
+}
+
+.modal-includes-box ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.modal-includes-box li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: #047857;
+}
+
+.modal-price-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.25rem;
+}
+
+.modal-price-box .label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.price-tag {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.price-tag .amount {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.price-tag .original {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.empty-catalog-state {
+  background-color: var(--bg-card);
+  border: 2px dashed var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2rem;
+  text-align: center;
+}
